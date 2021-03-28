@@ -1,9 +1,11 @@
 import re
 
-if __name__ == '__main__':
-    first_pattern = r"^21.*.php"
+
+def main():
     with open('logs.txt', 'r') as log_file:
         file = log_file.readlines()
+
+    first_pattern = r"^21.*.php"
     count_of_records = 0
     for line in file:
 
@@ -15,3 +17,7 @@ if __name__ == '__main__':
             print(result)
             count_of_records += 1
     print(count_of_records)
+
+
+if __name__ == '__main__':
+    main()
